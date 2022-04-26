@@ -1,0 +1,12 @@
+extends layout.pug
+
+block header
+	h1 Logg inn med ditt brukernavn og passord!
+block content
+	form(action="/auth" method="post")
+		input(type="text" placeholder="Brukernavn" name="username")
+		br
+		input(type="password" placeholder="Passord" name="password")
+		br
+		input(type="submit" value="Logg inn")
+	h1 Ikke registrert? <a href="/signup">Registrer deg da vel</a>.

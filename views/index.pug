@@ -1,0 +1,16 @@
+extends layout.pug
+
+block header
+  if (loggedin)
+    h1 Velkommen, #{name}!
+  else
+    h1 Velkommen!
+    
+block content
+  if (loggedin)
+    a(href="logout") Logg ut
+  else
+    a(href="login") Logg inn
+    <br>
+    a(href="signup") Registrer deg
+  
