@@ -8,7 +8,7 @@ const app = express()
 
 app.set('view engine', 'pug')
 
-// Håndter POST forespørsel
+// Håndter POST forespørsler
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
@@ -20,7 +20,6 @@ app.use(session({
   saveUninitialized: true
 }))
 
-// Legges nede
 app.post('/signup', (request, response) => {
   var db = {}
   try   { db = require('./database.json') }
